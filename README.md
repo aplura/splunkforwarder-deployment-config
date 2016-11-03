@@ -33,12 +33,12 @@ RPM CREATION:
 ------------
 General rpmbuild command:
 
-    rpmbuild --rebuild --define 'CLIENTNAME [deployment client name]' --define 'DEPLOYMENTSERVER [deployment server]' splunkforwarder-deployment-config-6.1.0-28.src.rpm
+    rpmbuild -ba --define 'CLIENTNAME [deployment client name]' --define 'DEPLOYMENTSERVER [deployment server]' splunkforwarder-deployment-config.spec
 Note: You can/should add `--sign` to your `rpmbuild` command in order to embed a GPG signature into your RPM. This will allow you to verify the integrity of the RPM. In order for this to work, you will need to generate a GPG key for RPM signing. For more information, see the `rpmbuild(8)` man page and [Red Hat's RPM Building](https://access.redhat.com/documentation/en-US/Red_Hat_Network_Satellite/5.3/html/Deployment_Guide/satops-rpm-building.html) page.
 
 Example rpmbuild command:
 
-    rpmbuild --rebuild --define 'CLIENTNAME Splunk-UF' --define 'DEPLOYMENTSERVER deploy.example.com' --sign splunkforwarder-deployment-config-6.1.0-28.src.rpm
+    rpmbuild -ba --define 'CLIENTNAME Splunk-UF' --define 'DEPLOYMENTSERVER deploy.example.com' --sign splunkforwarder-deployment-config.spec
 
 RPM USAGE:
 ----------
