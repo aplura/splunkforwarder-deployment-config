@@ -1,4 +1,4 @@
-%{!?SPLUNKVERSION:%global SPLUNKVERSION 6.2.0}
+%{!?SPLUNKVERSION:%global SPLUNKVERSION 6.5.0}
 %{!?SPLUNKPKG:%global SPLUNKPKG splunkforwarder}
 %{!?SPLUNKUSER:%global SPLUNKUSER splunk}
 %global name %{SPLUNKPKG}-deployment-config
