@@ -24,7 +24,7 @@ The following variables can be defined to further customize your deployment conf
  * Default: `splunk`
 
 * `SPLUNKVERSION` - This is the version of splunk or splunkforwarder that will be required (as a minimum) in order to install the splunkforwarder-deployment-config rpm.
- * Default: `6.1.0`
+ * Default: `6.5.0`
 
 * `DEPLOYMENTPORT` - This is the TCP port on which your DEPLOYMENTSERVER listens. By default, this is port 8089. If you changed this from the default, then you need to define it here.
  * Default: `8089`
