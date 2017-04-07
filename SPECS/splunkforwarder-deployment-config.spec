@@ -78,52 +78,52 @@ rm -rf %{buildroot}
 %doc README
 
 %changelog
-* Fri Nov 14 2014 Daniel Deighton <ddeighton@aplura.com>
+* Fri Nov 14 2014 Daniel Deighton <ddeighton-github@aplura.com>
 - Add SPLUNKUSER option; default to "splunk"
 - Remove macro references in changelog, since they cause problems with newer versions of RPMBUILD
 
-* Wed Nov  5 2014 Daniel Deighton <ddeighton@aplura.com>
+* Wed Nov  5 2014 Daniel Deighton <ddeighton-github@aplura.com>
 - Use all caps for configurable variables
 - Update README file
 
-* Thu Oct 30 2014 Daniel Deighton <ddeighton@aplura.com>
+* Thu Oct 30 2014 Daniel Deighton <ddeighton-github@aplura.com>
 - Update to use splunkforwarder 6.1.0 as default
 
-* Wed Oct 23 2013 Daniel Deighton <ddeighton@aplura.com>
+* Wed Oct 23 2013 Daniel Deighton <ddeighton-github@aplura.com>
 - Update to use splunkforwarder 6.0
 
-* Mon Sep 30 2013 Daniel Deighton <ddeighton@aplura.com>
+* Mon Sep 30 2013 Daniel Deighton <ddeighton-github@aplura.com>
 - Update to use splunkforwarder 5.0.5
 
-* Tue Jul  9 2013 Daniel Deighton <ddeighton@aplura.com>
+* Tue Jul  9 2013 Daniel Deighton <ddeighton-github@aplura.com>
 - Update to use splunkforwarder 5.0.2
 - Move mkdir command to install section
 
-* Fri Jan 18 2013 Daniel Deighton <ddeighton@aplura.com>
+* Fri Jan 18 2013 Daniel Deighton <ddeighton-github@aplura.com>
 - Upgrade to use splunkforwarder 5.0.1
 
-* Mon Jul 20 2012 Daniel Deighton <ddeighton@aplura.com>
+* Mon Jul 20 2012 Daniel Deighton <ddeighton-github@aplura.com>
 - Use splunk or splunkforwarder in name macro, rather than including it in the release macro. 
 - Disable post install hack; using posttrans now.
 - Base etc/apps subdir on splunkpkg macro
 
-* Mon Jun 18 2012 Daniel Deighton <ddeighton@aplura.com>
+* Mon Jun 18 2012 Daniel Deighton <ddeighton-github@aplura.com>
 - Use posttrans instead of post script to restart splunk
 
-* Mon Dec 19 2011 Daniel Deighton <ddeighton@aplura.com>
+* Mon Dec 19 2011 Daniel Deighton <ddeighton-github@aplura.com>
 - Added "hack" to start
-* Fri Dec 16 2011 Daniel Deighton <ddeighton@aplura.com>
+* Fri Dec 16 2011 Daniel Deighton <ddeighton-github@aplura.com>
 - Use splunkpkg macro to allow use of splunk or splunkforwarder
 - Set default values for splunkpkg, splunkversion, DEPLOYMENTPORT
 - Moved sources into tarball
 - included a README
 
-* Fri Dec  2 2011 Daniel Deighton <ddeighton@aplura.com>
+* Fri Dec  2 2011 Daniel Deighton <ddeighton-github@aplura.com>
 - Move Variable test code to prep section
 - Add BuildRoot line. Needed to build on RHEL5
 
-* Thu Dec  1 2011 Daniel Deighton <ddeighton@aplura.com>
+* Thu Dec  1 2011 Daniel Deighton <ddeighton-github@aplura.com>
 - Fix: Put deploymentclient.conf into default subdir. 
 
-* Wed Nov 30 2011 Daniel Deighton <ddeighton@aplura.com>
+* Wed Nov 30 2011 Daniel Deighton <ddeighton-github@aplura.com>
 - Initial release.
