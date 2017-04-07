@@ -1,0 +1,6 @@
+[deployment-client]
+disabled = false
+clientName = CLIENTNAME
+
+[target-broker:deploymentServer]
+targetUri = DEPLOYMENTSERVER:DEPLOYMENTPORT
