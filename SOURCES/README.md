@@ -38,7 +38,7 @@ Note: You can/should add `--sign` to your `rpmbuild` command in order to embed a
 
 Example rpmbuild command:
 
-    rpmbuild -ba --define 'CLIENTNAME Splunk-UF' --define 'DEPLOYMENTSERVER deploy.example.com' --sign splunkforwarder-deployment-config.spec
+    rpmbuild -ba --define 'CLIENTNAME dc-all' --define 'DEPLOYMENTSERVER splunk-ds.example.com' --sign splunkforwarder-deployment-config.spec
 
 RPM USAGE:
 ----------
