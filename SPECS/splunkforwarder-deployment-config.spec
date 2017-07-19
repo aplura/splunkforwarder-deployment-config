@@ -2,7 +2,7 @@
 %{!?SPLUNKPKG:%global SPLUNKPKG splunkforwarder}
 %{!?SPLUNKUSER:%global SPLUNKUSER splunk}
 %global name %{SPLUNKPKG}-deployment-config
-%global release 28
+%global release 29
 %global splunk_home /opt/%{SPLUNKPKG}
 %global splunk_app_path %{splunk_home}/etc/apps/zzRPM-%{SPLUNKPKG}-deployment-config
 
@@ -57,7 +57,7 @@ fi
 
 %posttrans
 %{splunk_home}/bin/splunk enable boot-start -user %{SPLUNKUSER}
-/bin/chown -R ${SPLUNKUSER}: %{splunk_home}
+/bin/chown -R %{SPLUNKUSER}: %{splunk_home}
 %{splunk_home}/bin/splunk start --accept-license --no-prompt --answer-yes
 
 # Hack to fix upgrades
@@ -76,6 +76,10 @@ rm -rf %{buildroot}
 %doc README.md
 
 %changelog
+* Wed Jul 19 2017 Daniel Deighton <ddeighton-github@aplura.com>
+- Set  release # to 29
+- Fixed reference to SPLUNKUSER macro in posttrans section
+
 * Fri Jul 14 2017 Daniel Deighton <ddeighton-github@aplura.com>
 - Use individual source files rather than a tgz.
 - Update default version to 6.6.0.
