@@ -77,7 +77,7 @@ rm -rf %{buildroot}
 %doc README.md
 
 %changelog
-Thu Jul 20 2017 Daniel Deighton <ddeighton-github@aplura.com>
+* Thu Jul 20 2017 Daniel Deighton <ddeighton-github@aplura.com>
 - Changed default version to 6.5.0
 - Set Release # to 30
 - Set License to GPLv2+
