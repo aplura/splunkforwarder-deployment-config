@@ -1,8 +1,8 @@
-%{!?SPLUNKVERSION:%global SPLUNKVERSION 6.6.0}
+%{!?SPLUNKVERSION:%global SPLUNKVERSION 6.5.0}
 %{!?SPLUNKPKG:%global SPLUNKPKG splunkforwarder}
 %{!?SPLUNKUSER:%global SPLUNKUSER splunk}
 %global name %{SPLUNKPKG}-deployment-config
-%global release 29
+%global release 30
 %global splunk_home /opt/%{SPLUNKPKG}
 %global splunk_app_path %{splunk_home}/etc/apps/zzRPM-%{SPLUNKPKG}-deployment-config
 
