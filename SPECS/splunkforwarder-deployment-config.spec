@@ -7,13 +7,13 @@
 %global splunk_app_path %{splunk_home}/etc/apps/zzRPM-%{SPLUNKPKG}-deployment-config
 
 %{!?DEPLOYMENTPORT:%global DEPLOYMENTPORT 8089}
-%{!?vendor: %global vendor None}
+%{!?vendor: %global vendor Aplura}
 
 Summary: Build custom Splunk deployment rpm
 Name: %{name}
 Version: %{SPLUNKVERSION}
 Release: %{release}
-License: none
+License: GPLv2+
 # Groups: See /usr/share/doc/rpm*/GROUPS file.
 Group: Applications/System
 Source0: deploymentclient.conf.in
@@ -23,7 +23,8 @@ BuildRoot: %{_tmppath}/%{name}-root
 Requires: %{SPLUNKPKG} >= %{SPLUNKVERSION}
 
 Vendor: %{vendor}
-Packager: %{?_packager:%{_packager}}%{!?_packager:%{_vendor}}
+Packager: %{?packager:%{packager}}%{!?packager:Unknown}
+URL: https://github.com/aplura/splunkforwarder-deployment-config
 
 %description
 Custom Splunk deployment client configuration
@@ -76,6 +77,14 @@ rm -rf %{buildroot}
 %doc README.md
 
 %changelog
+Thu Jul 20 2017 Daniel Deighton <ddeighton-github@aplura.com>
+- Changed default version to 6.5.0
+- Set Release # to 30
+- Set License to GPLv2+
+- Added URL Tag
+- Set Aplura as the default Vendor
+- Change Packager tag to use
+
 * Wed Jul 19 2017 Daniel Deighton <ddeighton-github@aplura.com>
 - Set  release # to 29
 - Fixed reference to SPLUNKUSER macro in posttrans section
