@@ -122,7 +122,7 @@ rm -rf %{buildroot}
 * Fri Jan 18 2013 Daniel Deighton <ddeighton-github@aplura.com>
 - Upgrade to use splunkforwarder 5.0.1
 
-* Mon Jul 20 2012 Daniel Deighton <ddeighton-github@aplura.com>
+* Fri Jul 20 2012 Daniel Deighton <ddeighton-github@aplura.com>
 - Use splunk or splunkforwarder in name macro, rather than including it in the release macro.
 - Disable post install hack; using posttrans now.
 - Base etc/apps subdir on splunkpkg macro
