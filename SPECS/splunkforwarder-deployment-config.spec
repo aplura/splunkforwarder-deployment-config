@@ -2,7 +2,7 @@
 %{!?SPLUNKPKG:%global SPLUNKPKG splunkforwarder}
 %{!?SPLUNKUSER:%global SPLUNKUSER splunk}
 %global name %{SPLUNKPKG}-deployment-config
-%global release 30
+%global release 31
 %global splunk_home /opt/%{SPLUNKPKG}
 %global splunk_app_path %{splunk_home}/etc/apps/zzRPM-%{SPLUNKPKG}-deployment-config
 
@@ -57,7 +57,7 @@ if [ "$(pgrep splunkd)" ]; then
 fi
 
 %posttrans
-%{splunk_home}/bin/splunk enable boot-start -user %{SPLUNKUSER}
+%{splunk_home}/bin/splunk --accept-license --no-prompt --answer-yes enable boot-start -user %{SPLUNKUSER}
 /bin/chown -R %{SPLUNKUSER}: %{splunk_home}
 %{splunk_home}/bin/splunk start --accept-license --no-prompt --answer-yes
 
@@ -77,6 +77,10 @@ rm -rf %{buildroot}
 %doc README.md
 
 %changelog
+* Mon Aug 7 2017 Daniel Deighton <ddeighton-github@aplura.com>
+- Set Release # to 31
+- Added options to accept-licence, no-prompt and answer-yes to enable boot-start command in posttrans script.
+
 * Thu Jul 20 2017 Daniel Deighton <ddeighton-github@aplura.com>
 - Changed default version to 6.5.0
 - Set Release # to 30
